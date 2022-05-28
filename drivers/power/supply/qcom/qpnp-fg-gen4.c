@@ -5155,6 +5155,8 @@ static int fg_psy_get_property(struct power_supply *psy,
 	case POWER_SUPPLY_PROP_CALIBRATE:
 		pval->intval = chip->calib_level;
 		break;
+	case POWER_SUPPLY_PROP_TYPEC_MODE:
+		return -ENODATA;
 	case POWER_SUPPLY_PROP_FASTCHARGE_MODE:
 		pval->intval = chip->fastcharge_mode_enabled;
 		break;
