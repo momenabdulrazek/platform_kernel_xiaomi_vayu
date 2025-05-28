@@ -725,9 +725,6 @@ int dsi_panel_sync_pen_fps(struct dsi_panel *panel,
 	}
 	refresh_rate = adj_mode->timing.refresh_rate;
 	switch (refresh_rate) {
-		case 30:
-			sync_pen_cmd_type = DSI_CMD_SET_SYNC_PEN_30HZ;
-			break;
 		case 60:
 			sync_pen_cmd_type = DSI_CMD_SET_SYNC_PEN_60HZ;
 			break;
@@ -1820,7 +1817,6 @@ const char *cmd_set_prop_map[DSI_CMD_SET_MAX] = {
 	"qcom,mdss-dsi-dispparam-cabcmovieon-command",
 	"qcom,mdss-dsi-dispparam-cabcoff-command",
 	"qcom,mdss-dsi-esd-check-read-command",
-	"qcom,mdss-dsi-sync-pen-30hz-command",
 	"qcom,mdss-dsi-sync-pen-60hz-command",
 	"qcom,mdss-dsi-sync-pen-120hz-command",
 };
@@ -1857,7 +1853,6 @@ const char *cmd_set_state_map[DSI_CMD_SET_MAX] = {
 	"qcom,mdss-dsi-dispparam-cabcmovieon-command-state",
 	"qcom,mdss-dsi-dispparam-cabcoff-command-state",
 	"qcom,mdss-dsi-esd-check-read-command-state",
-	"qcom,mdss-dsi-sync-pen-30hz-command-state",
 	"qcom,mdss-dsi-sync-pen-60hz-command-state",
 	"qcom,mdss-dsi-sync-pen-120hz-command-state",
 };
