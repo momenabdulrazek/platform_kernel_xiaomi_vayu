@@ -132,3 +132,4 @@ Android.bp
 out/
 tc/
 build.sh
+KernelSU-Next/
