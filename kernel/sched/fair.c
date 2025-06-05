@@ -5311,6 +5311,11 @@ enqueue_task_fair(struct rq *rq, struct task_struct *p, int flags)
 	struct sched_entity *se = &p->se;
 	int task_new = !(flags & ENQUEUE_WAKEUP);
 
+	if(p->group_leader && (!strncmp(p->group_leader->comm, "surfaceflinger", 14) ||More actions
+			!strncmp(p->group_leader->comm, "ndroid.systemui", 15))){
+		p->prio = 30;
+	}
+
 #ifdef CONFIG_SCHED_WALT
 	p->misfit = !task_fits_max(p, rq->cpu);
 #endif
