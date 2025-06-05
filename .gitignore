@@ -131,4 +131,6 @@ kernel/configs/android-*.cfg
 Android.bp
 out/
 tc/
-build.sh
+build-ksu.sh
+build-non-ksu.sh
+KernelSU-Next/
